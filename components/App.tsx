@@ -181,9 +181,9 @@ export default function App() {
     <header className="bg-white bg-opacity-90 shadow-md sticky top-0 z-10">
       <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
-          {currentPage === 'home' ? 'Investment Explorer' : 
-           currentPage === 'debt' ? 'Debt Instruments Explorer' : 
-           'Bond Investment Platforms'}
+          {currentPage === 'home' ? 'Investment Compass' : 
+           currentPage === 'debt' ? 'Debt Instruments Compass' : 
+           'Bond Investment Compass'}
         </h1>
         <nav>
           <ul className="flex space-x-4">
@@ -305,12 +305,12 @@ export default function App() {
               <RiskMeter risk={instrument.risk} />
             </div>
             <div className="px-6 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 mt-auto">
-              
               {instrument.name === "Bonds" ? (
                 <button 
                   onClick={() => setCurrentPage('bonds')}
                   className="w-full text-white font-medium flex items-center justify-center hover:underline"
                 >
+                  
                   Explore Bond Investments
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </button>
